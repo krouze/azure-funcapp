@@ -1,0 +1,37 @@
+{
+  "name": "ftnt-autoscale",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "dpl": "^3.8.0",
+    "eslint": "^5.4.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "fortinet-autoscale-azure": "file:azure",
+    "fortinet-autoscale-core": "file:core",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
+    "pack-zip": "^0.2.2",
+    "request": "^2.87.0",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "pretest": "eslint --fix .",
+    "deploy": "dpl",
+    "build": "scripts/make_dist.js",
+    "test": "nyc mocha --recursive './test/mocha/*.js' './core/test/mocha/*.js' './aws/test/mocha/*.js' './azure/test/mocha/*.js'",
+    "pack-all": "scripts/make_dist.js './' './dist'",
+    "pack-core": "scripts/make_dist.js './core' './dist'",
+    "pack-azure": "scripts/make_dist.js './azure' './dist'",
+    "pack-aws": "scripts/make_dist.js './aws' './dist'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortinet/multi-cloud-autoscale"
+  },
+  "author": "fortinet",
+  "license": "MIT"
+}
