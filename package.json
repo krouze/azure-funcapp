@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ftnt-autoscale-azure": "file:azure",
+    "ftnt-autoscale-azure": "file:ftnt-autoscale-azure-1.0.0.tgz",
     "uuid": "^3.3.2"
   },
   "files_to_deploy": [
