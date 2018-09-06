@@ -11,6 +11,7 @@
     "package.json"
   ],
   "dependencies": {
+    "ftnt-autoscale-core": "file:../core",
     "ms-rest-azure": "^2.5.7",
     "request": "^2.87.0"
   },
