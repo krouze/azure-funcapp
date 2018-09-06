@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ftnt-autoscale-azure": "file:../azure"
   },
   "files_to_deploy": [
     "*.js",
