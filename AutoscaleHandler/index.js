@@ -28,6 +28,7 @@ process.env.FTGT_BASE_CONFIG = 'diag sys ha hadiff log enable\\n' +
 '    set psksecret 12345678\\n' +
 'end\n';
 /* eslint-enable */
+let mockReq = {"method":"GET","url":"https://dchao-auto-scale-func.azurewebsites.net/api/AutoScaleHandler","originalUrl":"https://dchao-auto-scale-func.azurewebsites.net/api/AutoScaleHandler","headers":{"accept":"*/*","connection":"Keep-Alive","host":"dchao-auto-scale-func.azurewebsites.net","max-forwards":"10","fos-instance-id":"91702cef-3eba-482a-8355-be538e5c4832","x-waws-unencoded-url":"/api/AutoScaleHandler","client-ip":"40.81.159.44:1985","is-service-tunneled":"0","x-arr-log-id":"ad150e42-8157-4f84-b1eb-2df915456ae0","disguised-host":"dchao-auto-scale-func.azurewebsites.net","x-site-deployment-id":"dchao-auto-scale-func","was-default-hostname":"dchao-auto-scale-func.azurewebsites.net","x-original-url":"/api/AutoScaleHandler","x-forwarded-for":"40.81.159.44:1985","x-arr-ssl":"2048|256|C=US, S=Washington, L=Redmond, O=Microsoft Corporation, OU=Microsoft IT, CN=Microsoft IT TLS CA 4|CN=*.azurewebsites.net","x-forwarded-proto":"https"},"query":{},"params":{}};
 
 const FtntAutoScaleAzure = require('ftnt-autoscale-azure');
 /**
@@ -37,5 +38,5 @@ const FtntAutoScaleAzure = require('ftnt-autoscale-azure');
  */
 module.exports = async function(context, req) {
     await FtntAutoScaleAzure.initModule();
-    FtntAutoScaleAzure.handle(context, req);
+    FtntAutoScaleAzure.handle(context, mockReq);
 };
