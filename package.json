@@ -1,7 +1,7 @@
 {
   "name": "az_funcapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Azure Function App",
   "main": "index.js",
   "scripts": {
     "pretest": "eslint --fix .",
@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ftnt-autoscale-azure": "file:azure",
+    "uuid": "^3.3.2"
   },
   "files_to_deploy": [
     "*.js",
@@ -17,5 +19,6 @@
     "AutoscaleHandler/**",
     "package.json",
     "!package-lock.json"
-  ]
+  ],
+  "repository": "https://github.com/krouze/azure-funcapp.git"
 }
