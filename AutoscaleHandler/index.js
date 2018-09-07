@@ -12,5 +12,5 @@ const FtntAutoScaleAzure = require('ftnt-autoscale-azure');
  */
 module.exports = async function(context, req) {
     await FtntAutoScaleAzure.initModule();
-    FtntAutoScaleAzure.handle(context, req);
+    await FtntAutoScaleAzure.handle(context, req);
 };
